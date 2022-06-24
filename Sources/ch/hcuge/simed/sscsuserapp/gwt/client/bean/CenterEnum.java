@@ -34,7 +34,6 @@ public class CenterEnum extends BeanKeyValue implements Serializable, IsSerializ
 		}
 		return null;
 	}
-
 	// For  gwt Editor
 	public static ArrayList<BeanKeyValue> list()
 	{
