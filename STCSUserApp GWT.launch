@@ -9,7 +9,7 @@
 <booleanAttribute key="com.gwtplugins.gwt.eclipse.core.SUPERDEVMODE_ENABLED" value="true"/>
 <stringAttribute key="com.gwtplugins.gwt.eclipse.core.URL" value="http://127.0.0.1:55555/cgi-bin/WebObjects/STCSUserApp.woa"/>
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
-<listEntry value="/SSCSUserApp"/>
+<listEntry value="/STCSUserApp"/>
 </listAttribute>
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
 <listEntry value="4"/>
