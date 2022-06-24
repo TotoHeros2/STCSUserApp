@@ -13,9 +13,9 @@ public class RightEnum extends BeanKeyValue implements Serializable, IsSerializa
 
 	private static final ArrayList<BeanKeyValue> backend = new ArrayList<BeanKeyValue>();
 	
-	public  static final RightEnum ldm = new RightEnum("ldm","Local Data Manager");
-	public  static final RightEnum validate = new RightEnum("validate","Local validator");
-	public  static final RightEnum ro = new RightEnum("ro","Read only");
+	public  static final RightEnum ldm = new RightEnum("STCS-LDM","Local Data Manager");
+	public  static final RightEnum validate = new RightEnum("STCS-GV","Global Viewer");
+	public  static final RightEnum ro = new RightEnum("STCS-INV","Investigator");
 
 
 	static {
@@ -41,15 +41,15 @@ public class RightEnum extends BeanKeyValue implements Serializable, IsSerializa
 		return backend;
 	}
 	// for rb group
-	public static  final Parser<RightEnum> parser = new Parser() {
-
-		@Override
-		public Object parse(CharSequence text) throws ParseException {
-			// TODO Auto-generated method stub
-			return RightEnum.fromCode(text.toString());
-		}
-		
-	};	
+//	public static  final Parser<RightEnum> parser = new Parser() {
+//
+//		@Override
+//		public Object parse(CharSequence text) throws ParseException {
+//			// TODO Auto-generated method stub
+//			return RightEnum.fromCode(text.toString());
+//		}
+//		
+//	};	
 	public RightEnum() {
 		super();
 		// TODO Auto-generated constructor stub
