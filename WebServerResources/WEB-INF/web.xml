@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	version="2.5">
+
+
+	<context-param>
+		<param-name>WOAppMode</param-name>
+		<param-value>Development</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>WOClasspath</param-name>
+		<param-value>
+			WOAINSTALLROOT/STCSUserApp.woa/Contents/Resources/Java/ch/hcuge/simed/sscsuserapp/Application.class
+			WOAINSTALLROOT/STCSUserApp.woa/Contents/Resources/Java
+		</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>WOApplicationClass</param-name>
+		<param-value>ch.hcuge.simed.sscs.Application</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>org.mortbay.jetty.servlet.SessionURL</param-name>
+		<param-value>none</param-value>
+	</context-param>
+
+	<servlet>
+		<servlet-name>woServlet</servlet-name>
+
+		<servlet-class>er.extensions.jspservlet.ERXServletAdaptor</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>woServlet</servlet-name>
+		<url-pattern>/STCSUserApp/WebObjects/*</url-pattern>
+	</servlet-mapping>
+
+
+</web-app>

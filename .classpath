@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="com.gwtplugins.gwt.eclipse.core.GWT_CONTAINER"/>
+	<classpathentry kind="src" path="Sources"/>
+	<classpathentry kind="con" path="WOFramework/ERExtensions"/>
+	<classpathentry kind="con" path="WOFramework/ERJars"/>
+	<classpathentry kind="con" path="WOFramework/ERPrototypes"/>
+	<classpathentry kind="con" path="WOFramework/ERAttributeExtension"/>
+	<classpathentry kind="con" path="WOFramework/JavaWOExtensions"/>
+	<classpathentry kind="con" path="WOFramework/WOOgnl"/>
+	<classpathentry kind="con" path="WOFramework/JavaEOAccess"/>
+	<classpathentry kind="con" path="WOFramework/JavaEOControl"/>
+	<classpathentry kind="con" path="WOFramework/JavaFoundation"/>
+	<classpathentry kind="con" path="WOFramework/JavaJDBCAdaptor"/>
+	<classpathentry kind="con" path="WOFramework/JavaWebObjects"/>
+	<classpathentry kind="con" path="WOFramework/JavaXML"/>
+	<classpathentry kind="con" path="WOFramework/CohortUser"/>
+	<classpathentry kind="con" path="WOFramework/EROraclePlugIn"/>
+	<classpathentry kind="con" path="WOFramework/ERJavaMail"/>
+	<classpathentry kind="lib" path="Libraries/gwtbootstrap3-0.9.3.jar"/>
+	<classpathentry kind="lib" path="Libraries/gwtbootstrap3-extras-0.9.3.jar"/>
+	<classpathentry kind="con" path="WOFramework/SimedFoundation"/>
+	<classpathentry kind="lib" path="Libraries/ojdbc6.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jdk18"/>
+	<classpathentry kind="con" path="WOFramework/WOGWT"/>
+	<classpathentry kind="lib" path="Libraries/gwt-servlet.jar"/>
+	<classpathentry kind="output" path="WebServerResources/WEB-INF/classes"/>
+</classpath>
