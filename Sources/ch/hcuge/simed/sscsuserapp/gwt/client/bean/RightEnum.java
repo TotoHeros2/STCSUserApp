@@ -40,7 +40,7 @@ public class RightEnum extends BeanKeyValue implements Serializable, IsSerializa
 	{
 		return backend;
 	}
-	// for rb group
+//	 for rb group
 //	public static  final Parser<RightEnum> parser = new Parser() {
 //
 //		@Override

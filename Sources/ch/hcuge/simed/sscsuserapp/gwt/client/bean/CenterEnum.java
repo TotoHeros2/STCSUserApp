@@ -40,7 +40,7 @@ public class CenterEnum extends BeanKeyValue implements Serializable, IsSerializ
 	{
 		return backend;
 	}
-	// for rb group
+//	 for rb group
 //	public static  final Parser<CenterEnum> parser = new Parser() {
 //
 //		@Override
