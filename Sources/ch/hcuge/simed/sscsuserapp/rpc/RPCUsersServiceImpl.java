@@ -7,10 +7,13 @@ import java.util.UUID;
 import com.webobjects.appserver.WOContext;
 import com.webobjects.eocontrol.EOEditingContext;
 import com.webobjects.eocontrol.EOGlobalID;
+import com.webobjects.eocontrol.EOQualifier;
 import com.webobjects.eocontrol.EOSortOrdering;
 import com.webobjects.foundation.NSArray;
 import com.webobjects.foundation.NSValidation;
 
+import ch.hcuge.simed.cohort.transverse.db.Center;
+import ch.hcuge.simed.cohort.transverse.db.Role;
 import ch.hcuge.simed.cohort.transverse.db.WorkPosition;
 import ch.hcuge.simed.sscsuserapp.MailSender;
 import ch.hcuge.simed.sscsuserapp.gwt.client.bean.CenterEnum;
@@ -20,6 +23,7 @@ import ch.hcuge.simed.sscsuserapp.gwt.client.bean.SimedUser;
 import ch.hcuge.simed.sscsuserapp.gwt.client.service.RPCUsersService;
 import er.extensions.eof.ERXEC;
 import er.extensions.eof.ERXEOGlobalIDUtilities;
+import er.extensions.qualifiers.ERXAndQualifier;
 import wogwt.server.rpc.WOGWTRpcService;
 
 public class RPCUsersServiceImpl extends WOGWTRpcService implements RPCUsersService{
@@ -105,9 +109,21 @@ public class RPCUsersServiceImpl extends WOGWTRpcService implements RPCUsersServ
 		}
 		for (RightCenter rightCenter :  user.getRightCenters())
 		{
-			String publiId = rightCenter.getRight().getCode() + "-" + rightCenter.getCenter().getCode();
-			WorkPosition wp = WorkPosition.fetchRequiredWorkPosition(userDB.editingContext(), WorkPosition.PUBLIC_ID.eq(publiId));
-			userDB.addToWorkPositions(wp);
+			// SSCS
+//			String publiId = rightCenter.getRight().getCode() + "-" + rightCenter.getCenter().getCode();
+//			WorkPosition wp = WorkPosition.fetchRequiredWorkPosition(userDB.editingContext(), WorkPosition.PUBLIC_ID.eq(publiId));
+//			userDB.addToWorkPositions(wp);
+			// STCS
+			EOQualifier rightQual = WorkPosition.ROLE.dot(Role.PUBLIC_ID.eq(rightCenter.getRight().getCode()));
+			EOQualifier centerQual = WorkPosition.WORK_LOCATION.dot(Center.PUBLIC_ID.eq(rightCenter.getCenter().getCode()));
+			ERXAndQualifier qualAll = new ERXAndQualifier(rightQual,centerQual);
+
+			NSArray<WorkPosition> wps = WorkPosition.fetchWorkPositions(userDB.editingContext(),qualAll, null);
+			if (wps.count() > 0)
+			{
+				userDB.addToWorkPositions(wps.objectAtIndex(0));
+			}
+			
 		}
 		if (userDB.currentWorkPosition() == null)
 		{
