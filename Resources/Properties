@@ -44,22 +44,22 @@ CohortUser.DBPassword=kl9er4
 #wolips.password=wo
 
 # ERJavaMail
-er.javamail.centralize=true
+er.javamail.centralize=false
 er.javamail.adminEmail=pegn@hcuge.ch
 er.javamail.debugEnabled=true
 
 # config for HUG
-er.javamail.smtpHost=mailhost.hcuge.ch
-er.javamail.smtpAuth=false
-er.javamail.smtpUser=pierre.gilquin@hcuge.ch
-er.javamail.smtpPassword=
+#er.javamail.smtpHost=mailhost.hcuge.ch
+#er.javamail.smtpAuth=false
+#er.javamail.smtpUser=pierre.gilquin@hcuge.ch
+#er.javamail.smtpPassword=
 
 # sciCore
-#er.javamail.smtpUser=anonymous@unibas.ch
-#er.javamail.smtpHost=smtp11-priv.unibas.ch
+er.javamail.smtpUser=anonymous@unibas.ch
+er.javamail.smtpHost=smtp11-priv.unibas.ch
 #er.javamail.smtpPort=587
-#er.javamail.smtpAuth=false
-#er.javamail.smtpPassword=
+er.javamail.smtpAuth=false
+er.javamail.smtpPassword=
 
 
 # Log4j Configuration

@@ -16,12 +16,15 @@ public class RightEnum extends BeanKeyValue implements Serializable, IsSerializa
 	public  static final RightEnum ldm = new RightEnum("STCS-LDM","Local Data Manager");
 	public  static final RightEnum validate = new RightEnum("STCS-GV","Global Viewer");
 	public  static final RightEnum ro = new RightEnum("STCS-INV","Investigator");
+	public  static final RightEnum lm = new RightEnum("STCS-LOM","Local Manager");
 
 
 	static {
 		backend.add(ldm);
 		backend.add(validate);
 		backend.add(ro);
+		backend.add(lm);
+
 	}
 
 	// For WO

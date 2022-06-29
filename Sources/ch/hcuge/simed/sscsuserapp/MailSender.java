@@ -79,14 +79,14 @@ public class MailSender {
 				message.setFromAddress(ERXProperties.stringForKey("er.javamail.smtpUser"),"Simed HUG" );
 				message.setReplyToAddress(ERXProperties.stringForKey("er.javamail.smtpUser"));
 
-				message.setSubject("Welcome to SSCS V2 Application");
+				message.setSubject("Welcome to STCS V2.1 Application on sciCore server");
 				//			message.setSubject("Welcome to STCS V2.1 Application");
 
 				//			message.setCCAddresses(new NSArray<String>("Camillo.Ribi@chuv.ch","Christophe.Gaudet-Blavignac@hcuge.ch") );
 
 
 				message.sendMail(true); // block until done
-				ERXApplication.log.info("SSCS : Send change pwd message to  " +  user.email() + " : " + user.firstName() + " " + user.lastName());
+				ERXApplication.log.info("STCS : Send change pwd message to  " +  user.email() + " : " + user.firstName() + " " + user.lastName());
 			} catch (AddressException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
