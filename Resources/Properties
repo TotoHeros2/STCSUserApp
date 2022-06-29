@@ -54,6 +54,14 @@ er.javamail.smtpAuth=false
 er.javamail.smtpUser=pierre.gilquin@hcuge.ch
 er.javamail.smtpPassword=
 
+# sciCore
+#er.javamail.smtpUser=anonymous@unibas.ch
+#er.javamail.smtpHost=smtp11-priv.unibas.ch
+#er.javamail.smtpPort=587
+#er.javamail.smtpAuth=false
+#er.javamail.smtpPassword=
+
+
 # Log4j Configuration
 log4j.loggerFactory=er.extensions.logging.ERXLogger$Factory
 log4j.rootCategory=INFO,A1

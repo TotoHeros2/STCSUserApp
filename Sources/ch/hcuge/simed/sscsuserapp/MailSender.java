@@ -7,6 +7,7 @@ import com.webobjects.appserver.WORequest;
 import com.webobjects.foundation.NSArray;
 
 import ch.hcuge.simed.cohort.transverse.db.SimedUser;
+import ch.hcuge.simed.sscsuserapp.components.MailChangePwdSciCore;
 import ch.hcuge.simed.sscsuserapp.components.MailChangePwdSscs;
 //import ch.hcuge.simed.sscsuserapp.gwt.client.bean.SimedUser;
 import er.extensions.appserver.ERXApplication;
@@ -52,8 +53,8 @@ public class MailSender {
 
 
 			ERXWOContext mailContext = new ERXWOContext( new WORequest("GET", "/", "HTTP/1.1", null, null, null));
-			MailChangePwdSscs mailUser =  (MailChangePwdSscs)Application.application().pageWithName("MailChangePwdSscs",mailContext);
-			//		MailChangePwdSTCS mailUser =  (MailChangePwdSTCS)Application.application().pageWithName("MailChangePwdSTCS",mailContext);
+//			MailChangePwdSscs mailUser =  (MailChangePwdSscs)Application.application().pageWithName("MailChangePwdSscs",mailContext);
+			MailChangePwdSciCore mailUser =  (MailChangePwdSciCore)Application.application().pageWithName("MailChangePwdSciCore",mailContext);
 
 			mailUser.setUrlPrefixChangepwd(urlPrefixChangepwd);
 			mailUser.setSimedUser(user);
